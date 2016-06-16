@@ -7,8 +7,16 @@
       
         get_template_part( 'content', get_post_format() ); 
 
-      endwhile; endif;
-      ?>
+      endwhile; ?>
+      <!--Insert Pagination-->
+      <nav>
+        <ul class="pager">
+          <li><?php next_posts_link( 'Older posts'); ?></li>
+          <li><?php previous_posts_link ('Newer posts'); ?></li>
+        </ul>
+      </nav>
+
+      <?php endif; ?>
       <!--End of WordPress Loop-->
     </div> <!-- /.blog-main-->
 
